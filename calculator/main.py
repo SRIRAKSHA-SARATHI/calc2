@@ -16,6 +16,6 @@ class Calculator:
         self.result = self.result - value_a
         return self.result
     def multiply_numbers(self, value_a, value_b):
-        """ multiplication of two numbers """
+        """ multiplication of 2 numbers """
         self.result = value_a * value_b
         return self.result
