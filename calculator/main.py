@@ -8,7 +8,7 @@ class Calculator:
         return self.result
 
     def add_number(self, value_a):
-        """ adds number to result"""
+        """ adds to result"""
         self.result = self.result + value_a
         return self.result
     def subtract_number(self, value_a):
