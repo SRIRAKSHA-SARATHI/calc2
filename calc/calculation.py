@@ -1,4 +1,8 @@
 """This is our calculation base class / Abstract Class"""
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=missing-function-docstring
+# pylint: disable=line-too-long
 class Calculation:
 
     #contstructor and it is the first function called when an object of the class is instantiated
