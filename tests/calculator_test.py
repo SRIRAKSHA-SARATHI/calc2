@@ -3,6 +3,9 @@
 # pylint: disable=missing-class-docstring
 # pylint: disable=missing-function-docstring
 # pylint: disable=line-too-long
+# pylint: disable=unused-argument,redefined-outer-name
+# pylint: disable=invalid-name
+# pylint: disable=singleton-comparison
 import pprint
 
 import pytest
