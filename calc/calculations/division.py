@@ -1,8 +1,11 @@
-"""This is division operation object"""
+"""Division Class"""
+from calc.calculations.calculation import Calculation
 
-from calc.history.calculations import Calculations
-class Division(Calculations):
-    """This is division class"""
+class Division(Calculation):
+    """Division calculation object"""
     def get_result(self):
-        """This is division class"""
-        return self.value_a / self.value_b
+        """get the division results"""
+        result = 1.0
+        for value in self.values:
+            result = result / value
+        return result
