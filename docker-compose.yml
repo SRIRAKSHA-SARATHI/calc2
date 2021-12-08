@@ -1,8 +1,19 @@
 version: "3.2"
 services:
-  python:
-    build: .
+  flask:
+    build: ../../Downloads/calc2-webCalc-Part1
+    restart: always
+    environment:
+      - APP_NAME=flask
+    expose:
+      - 8080
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     volumes:
       - .:/home/myuser
+  nginx:
+    build: ../../Downloads/calc2-webCalc-Part1/nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
