@@ -1,7 +1,7 @@
 version: "3.2"
 services:
   flask:
-    build: ../../Downloads/calc2-webCalc-Part1
+    build: .
     restart: always
     environment:
       - APP_NAME=flask
@@ -12,7 +12,7 @@ services:
     volumes:
       - .:/home/myuser
   nginx:
-    build: ../../Downloads/calc2-webCalc-Part1/nginx
+    build: ./nginx
     container_name: nginx
     restart: always
     ports:
