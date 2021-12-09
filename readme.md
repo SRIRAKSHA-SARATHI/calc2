@@ -8,4 +8,7 @@ pytest  --pylint --cov
 .coveragerc is the config for coverage
 setup.py is a config file for pytest
 # Screenshot of flash messages:
-![Img](screenshots/Screen Shot 2021-12-08 at 10.00.07 PM.png)
+# Error Message:
+![Img](https://github.com/SRIRAKSHA-SARATHI/calc2/blob/4c3e59ad236e80cdcae3dc702396aa901ec876e8/screenshots/Screen%20Shot%202021-12-08%20at%2010.00.07%20PM.png)
+# Successful message:
+![Img](https://github.com/SRIRAKSHA-SARATHI/calc2/blob/4c3e59ad236e80cdcae3dc702396aa901ec876e8/screenshots/Screen%20Shot%202021-12-08%20at%2010.00.07%20PM.png)
