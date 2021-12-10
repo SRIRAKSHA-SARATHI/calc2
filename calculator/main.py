@@ -1,3 +1,9 @@
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=missing-function-docstring
+# pylint: disable=line-too-long
+# pylint: disable=unused-argument,redefined-outer-name
+# pylint: disable=invalid-name
 """ This is the increment function"""
 class Calculator:
     """ This is the Calculator class"""
@@ -8,15 +14,16 @@ class Calculator:
         return self.result
 
     def add_number(self, value_a):
-        """ adds to result"""
+        """ adds number to result"""
         self.result = self.result + value_a
         return self.result
     def subtract_number(self, value_a):
         """ subtract number from result"""
         self.result = self.result - value_a
         return self.result
+
     def multiply_numbers(self, value_a, value_b):
-        """ multiply 2 numbers """
+        """ multiply two numbers and store the result"""
         self.result = value_a * value_b
         return self.result
 
