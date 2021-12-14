@@ -13,4 +13,4 @@ pytest  --pylint --cov
 setup.py is a config file for pytest
 #
 # Pylint coverge screenshot:
-![img](https://github.com/SRIRAKSHA-SARATHI/calc2/blob/cbb1d70781476cfe04247f5559bcd6bd2053828b/Screen%20Shot%202021-12-10%20at%203.51.31%20PM.png)
+![img](https://github.com/SRIRAKSHA-SARATHI/calc2/blob/3670e6d6d05e00a4eb976c20781d532f30df7b9a/Screen%20Shot%202021-12-14%20at%2012.33.09%20AM.png)
