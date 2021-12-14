@@ -1,11 +1,5 @@
 """Addition Class"""
-# pylint: disable=missing-module-docstring
-# pylint: disable=missing-class-docstring
-# pylint: disable=missing-function-docstring
-# pylint: disable=line-too-long
-# pylint: disable=unused-argument,redefined-outer-name
-# pylint: disable=invalid-name
-from calc.calcul import Calculation
+from calc.calculations.calculations  import Calculation
 
 class Addition(Calculation):
     """ calculation addition class"""
@@ -15,4 +9,3 @@ class Addition(Calculation):
         for value in self.values:
             sum_of_values = value + sum_of_values
         return sum_of_values
-    

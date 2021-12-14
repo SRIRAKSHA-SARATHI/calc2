@@ -1,19 +1,26 @@
-# pylint: disable=missing-module-docstring
-# pylint: disable=missing-class-docstring
-# pylint: disable=missing-function-docstring
-# pylint: disable=line-too-long
-# pylint: disable=unused-argument,redefined-outer-name
-# pylint: disable=invalid-name
+"""Testing Division"""
+import pytest
 from calc.calculations.division import Division
 
 
-def test_division_create():
-    calc_obj = Division.create((1, 2))
-    assert isinstance(calc_obj, Division)
+def test_calculation_division():
+    """testing that our calculator has a static method for multiplication"""
+    # Arrange
+    mynumbers = (1.0, 2.0, 4.0)
+    division = Division(mynumbers)
+    # Act
+    # Assert
+    assert division.get_result() == 0.125
 
 
-def test_division_get_result():
-    calc_obj = Division.create((4, 2))
-    assert calc_obj.get_result() == 0.125
-    calc_obj = Division.create((5, 4))
-    assert calc_obj.get_result() == 0.05
+def test_calculator_division_exception():
+    """ Testing division exception for division by zero"""
+    # Arrange
+    mynumbers = (1.0, 0.0, 1.0)
+    division = Division(mynumbers)
+    # Act
+    # Assert
+    with pytest.raises(ZeroDivisionError):
+        # import pdb;pdb.set_trace()
+        result = division.get_result()
+        assert result is True
