@@ -6,3 +6,4 @@ class IndexController(ControllerBase):
     def get():
         return render_template('index.html')
 
+
