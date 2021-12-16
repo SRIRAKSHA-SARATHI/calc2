@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+
+    .row:after {
+      display: table;
+      clear: both;
+      border: #005CBF;
+    }
+
+    .float-cont > * {
+      float:left;
+      margin-right:5px;
+    }
+    .float-cont1 > * {
+      float:right;
+      margin-right:5px;
+    }
+    .cont {
+      *zoom:1 /* for IE */
+    }
+    .cont:before,
+    .cont:after {
+      content: " ";
+      display: table;
+    }
+    .cont:after {
+      clear: both;
+    }
+    a:hover
+    {
+      background-color: #E74C3C;
+      border-color:black;
+      font-size: 20px;
+      font-weight: bolder;
+    }
+
+
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+
+    </style>
+<body>
+{% endblock %}
+{% block content %}
+
+    <br><br><h4>PYLINT</h4>
+    <div class="cont float-cont" style="color:black">
+      <p align="justify">
+    Pylint is a Python static code analysis tool which looks for programming errors, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
+
+    It’s highly configurable, having special pragmas to control its errors and warnings from within your code, as well as from an extensive configuration file. It is also possible to write your own plugins for adding your own checks or for extending pylint in one way or another.
+
+    It’s a free software distributed under the GNU General Public Licence unless otherwise specified.
+
+    It is a static code analysis tool used to check for errors and enforces good coding standards.
+    Pylint is fully customizable by the user, with integral special functions to control individual errors and alerts within the user’s code. Pylint can also be executed from an extensive configuration file and gives to the user the ability to write his custom plugins.
+
+    <ul>Some types of check include:
+        <li>Checking the length of each line</li>
+        <li>Checking that variable names are well-formed according to the project's coding standard</li>
+        <li>Checking that declared interfaces are truly implemented.</li>
+    </ul>
+    <ul>The following steps can be followed to install pylint:
+        <li>In the terminal type the command - pip install pylint</li>
+        <li>To run the test, use the command - pylint filename.py</li>
+    </ul>
+
+
+
+    </p><br>
+
+    </div>
+
+  <br>
+    <br>   <center>   <img src="{{ url_for('static', filename='images/p2.jpg') }}" alt="pylint" width=100 class="image" style="width: 50%"></center>
+
+{% endblock %}
+</div>
+
+  </div>
+</body>
