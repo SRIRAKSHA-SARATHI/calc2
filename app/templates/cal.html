@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+
+    .row:after {
+      display: table;
+      clear: both;
+      border: #005CBF;
+    }
+
+    .float-cont > * {
+      float:left;
+      margin-right:5px;
+    }
+    .float-cont1 > * {
+      float:right;
+      margin-right:5px;
+    }
+    .cont {
+      *zoom:1 /* for IE */
+    }
+    .cont:before,
+    .cont:after {
+      content: " ";
+      display: table;
+    }
+    .cont:after {
+      clear: both;
+    }
+    a:hover
+    {
+      background-color: #E74C3C;
+      border-color:black;
+      font-size: 20px;
+      font-weight: bolder;
+    }
+
+
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+
+    </style>
+<body>
+{% endblock %}
+{% block content %}
+
+    <div class="cont float-cont" style="color:black"><br>
+<h1>SEPARATION OF CONCERNS </h1>
+
+</div>
+<BR>
+<div class="container">
+
+
+        <p align="justify">Separation of concerns (SoC) is a design principle for separating a computer program into distinct sections. Each section addresses a separate concern, a set of information that affects the code of a computer program. A concern can be as general as "the details of the hardware for an application", or as specific as "the name of which class to instantiate". A program that embodies SoC well is called a modular program. Modularity, and hence separation of concerns, is achieved by encapsulating information inside a section of code that has a well-defined interface. Encapsulation is a means of information hiding.Layered designs in information systems are another embodiment of separation of concerns </p>
+
+
+
+
+        <p align="justify">Separation of functions can be summarized by the following statement:Try not to write giant functions. In the below example you can see that the operations are divided into different functions. This increases the readability of the program.</p>
+
+
+
+        <h3>Importance of separation of concerns</h3>
+        <p align="justify">The previous section took a more functionally based approach to solve that particular problem, but we can apply this same principle in a more object-oriented approach. Again, note that we have separated all of the conceptually different functions which we must perform, and created a class to encapsulate them. Each class is concerned with a particular operation, such as printing the result to the console (via println()), validation logic, evaluation logic, and our primary function still coordinates the flow of data between these different things.
+            This degree of association might appear to be dreary or overemphasized. The significance, notwithstanding, of an efficient and elegantly composed program couldn't possibly be more significant. <br><br>To give a more practical model, I'll allude to the adding machine's document structure (displayed over) that has been referenced in past articles. While not displayed in the past models, imagined above is the record design of the adding machine's code. Here, you can see an overall mini-computer document, with 2 records inside close by a calculator.py record and a __init__.py document. As of now, an overall association construction can be seen from the records. The calculator.py record is the fundamental document where basically everything meets up. Further, a estimations organizer and a set of experiences envelope can be seen as inside, where the computations' organizer is responsible for the math part of the mini-computer and the set of experiences organizer is responsible for the lesser usefulness of the mini-computer.
+            <br><br>This detachment of concern is advantageous particularly for reusing code. Let's assume you are composing one more program with mini-computer usefulness. Rather than parsing through scattered documents and refactor code, you would be ready to reorder the current envelopes into your new activities, and with little changes to your code, you would have the option to reorder your mini-computer in something else entirely.
+        </p>
+        <br><br>
+        <center>
+                  <img src="{{ url_for('static', filename='images/Separationofcocern.png') }}" alt="pylint" width=40 class="image" style="width: 50%">
+</center><br>
+
+
+
+    <br>
+
+
+        <h3>Advantages</h3>
+        <p align="justify">
+            <ol>
+                <li>Lack of duplication and singularity of purpose of the individual components render the overall system easier to maintain.</li>
+                <li>The system becomes more stable as a byproduct of the increased maintainability.</li>
+                <li>The strategies required to ensure that each component only concerns itself with a single set of cohesive responsibilities often result in natural extensibility points.</li>
+                <li>The decoupling which results from requiring components to focus on a single purpose leads to components which are more easily reused in other systems, or different contexts within the same system.</li>
+                <li>The increase in maintainability and extensibility can have a major impact on the marketability and adoption rate of the system.</li>
+            </ol>
+
+        </p>
+    </div>
+<br>
+{% endblock %}
+</div>
+
+  </div>
+</body>

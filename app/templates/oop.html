@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+
+    .row:after {
+      display: table;
+      clear: both;
+      border: #005CBF;
+    }
+
+    .float-cont > * {
+      float:left;
+      margin-right:5px;
+    }
+    .float-cont1 > * {
+      float:right;
+      margin-right:5px;
+    }
+    .cont {
+      *zoom:1 /* for IE */
+    }
+    .cont:before,
+    .cont:after {
+      content: " ";
+      display: table;
+    }
+    .cont:after {
+      clear: both;
+    }
+    a:hover
+    {
+      background-color: #E74C3C;
+      border-color:black;
+      font-size: 20px;
+      font-weight: bolder;
+    }
+
+
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+
+    </style>
+<body>
+{% endblock %}
+{% block content %}
+
+    <div class="cont float-cont" style="color:black"><br>
+<center><h1>PRINCIPLES OF OOPs</h1><br>
+<h5>The principles of Object Oriented Programming are: Encapsulation, Inheritance, Polymorphism and Abstraction.</h5></center>
+<br>
+
+
+
+                   <h2>Encapsulation</h2>
+
+
+
+                    <p align="justify">
+                        Encapsulation is one of the fundamental concepts in OOP. It describes the idea of
+                        wrapping data and the methods that work on data within one unit. This puts restrictions
+                        on accessing variables and methods directly and can prevent the accidental modification
+                        of data. A class is an example of encapsulation as it encapsulates all the data
+                        that is member functions, variables,etc. There are two ways members can be accessed: Protected & Private.
+                        Protected members are those members of the class that cannot be accessed outside the class but can be accessed
+                        from within the class and its subclasses. Private members are similar to protected members, the difference is that the class members
+                        declared private should neither be accessed outside the class nor by any base class.
+                    </p><br>
+
+<center>
+          <img src="{{ url_for('static', filename='images/Encap.png') }}" alt="pylint" width=40 class="image" style="width: 50%">
+</center>
+
+                       <br><br>
+
+                    <p align="justify">In the calculator program, the definition of a class is an example
+                    of how encapsulation is done. The calculator class is defined with its methods and variables.</p>
+
+    <center>       <img src="{{ url_for('static', filename='images/Encapsulation.png') }}" alt="pylint" width=40 class="image" style="width: 50%">
+</center>
+
+
+                    <br><BR>
+                    <br><h2>Inheritance</h2>
+
+
+                    <p align="justify">
+                        Inheritance allows us to define a class that inherits all the methods and properties from another class.
+                        Inheritance is the capability of one class to derive or inherit the properties from another class.
+                        Inheritance is one of the core concepts of object-oriented programming (OOP) languages. It is a mechanism where you can to derive a class from another class for a hierarchy of classes that share a set of attributes and methods.
+
+                        You can use it to declare different kinds of exceptions, add custom logic to existing frameworks, and even map your domain model to a database.
+                        In Java, each class can only be derived from one other class. That class is called a superclass, or parent class. The derived class is called subclass, or child class.
+
+                        You use the keyword extends to identify the class that your subclass extends. If you don’t declare a superclass, your class implicitly extends the class Object. Object is the root of all inheritance hierarchies; it’s the only class in Java that doesn’t extend another class.
+
+                        <br>Parent class is the class being inherited from, also called base class.
+
+                        <br>Child class is the class that inherits from another class, also called derived class.
+                    </p><br>
+
+
+
+
+                    <br><br>
+
+                    <p align="justify">Inheritance can be demonstrated in the calculator program in the following code below.
+                        The calculator class which is the parent class is imported.
+                    </p><br>
+
+    <center>      <img src="{{ url_for('static', filename='images/Inheritance.png') }}" alt="pylint" width=40 class="image" style="width: 50%">
+</center>
+
+    <br>
+
+                       <h2> Polymorphism</h2>
+
+                   <p align="justify">
+                       Polymorphism means having vivid or different forms. In the programming world, Polymorphism refers to the
+                       ability of the function with the same name to carry different functionality altogether.
+                       It creates a structure that can use many forms of objects.
+
+                       This permits functions/arguments to use entities of different types at different times.
+
+                       In object-oriented programming, Polymorphism allows a particular object referring to a
+                       particular class to be used in a similar fashion as if it was a different object referring
+                       to altogether a different class.
+                       Polymorphism in OOPs is inseparable and an essential concept of every object-oriented programming language. An object or reference basically can take multiple forms in different instances. As the word suggests, ‘poly’ means ‘many’ and ‘morph’ points at ‘forms’; thus, polymorphism as a whole would mean ‘a property of having many forms.’
+
+                       The object-oriented programming language processes classes and objects by a single interface. It implements the concepts of function overloading, overriding, and virtual functions. Also, it is typically used for instrumenting inheritance in programming.
+                   </p><br>
+
+            <center>       <img src="{{ url_for('static', filename='images/Poly.jpeg') }}" alt="pylint" width=40 class="image" style="width: 50%">
+</center>
+
+
+                <br>
+
+                <p align="justify">
+                    Polymorphism can be demonstrated in the calculator program in the following code snippet.
+                    The Calculator class is used to perform different operation functions like addition, subtraction, etc
+                </p><br>
+
+    <center>         <img src="{{ url_for('static', filename='images/Polymorphism.png') }}" alt="pylint" width=40 class="image" style="width: 50%">
+</center>
+
+
+    <br>
+
+    <h2> Abstraction</h2>
+
+    <p align="justify">
+        Abstraction is the concept of object-oriented programming that “shows” only essential attributes and “hides” unnecessary information. The main purpose of abstraction is hiding the unnecessary details from the users. Abstraction is selecting data from a larger pool to show only relevant details of the object to the user. It helps in reducing programming complexity and efforts. It is one of the most important concepts of OOPs.
+        Data Abstraction is the property by virtue of which only the essential details are displayed to the user. The trivial or the non-essentials units are not displayed to the user. Ex: A car is viewed as a car rather than its individual components.
+
+        Data Abstraction may also be defined as the process of identifying only the required characteristics of an object ignoring the irrelevant details. The properties and behaviours of an object differentiate it from other objects of similar type and also help in classifying/grouping the objects.
+    </p><br>
+
+    <center><      <img src="{{ url_for('static', filename='images/abstract.jpeg') }}" alt="pylint" width=40 class="image" style="width: 50%">
+</center><br>
+
+
+
+    <p align="justify">
+        In the below code, we have imported the abc module to create the abstract base class. We created the Calculator as base class that inherited the ABC class and defined an abstract method named get_result(). We have then inherited the base class, Division,implemented the abstract method differently.
+    </p><br>
+    <center>      <img src="{{ url_for('static', filename='images/Abstraction.png') }}" alt="pylint" width=40 class="image" style="width: 50%">
+</center>
+    </div>
+
+{% endblock %}
+</div>
+
+  </div>
+</body>

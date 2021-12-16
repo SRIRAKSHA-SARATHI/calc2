@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+
+    .row:after {
+      display: table;
+      clear: both;
+      border: #005CBF;
+    }
+
+    .float-cont > * {
+      float:left;
+      margin-right:5px;
+    }
+    .float-cont1 > * {
+      float:right;
+      margin-right:5px;
+    }
+    .cont {
+      *zoom:1 /* for IE */
+    }
+    .cont:before,
+    .cont:after {
+      content: " ";
+      display: table;
+    }
+    .cont:after {
+      clear: both;
+    }
+    a:hover
+    {
+      background-color: #E74C3C;
+      border-color:black;
+      font-size: 20px;
+      font-weight: bolder;
+    }
+
+
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+
+    </style>
+<body>
+{% endblock %}
+{% block content %}
+
+    <div class="cont float-cont" style="color:black"><br>
+      <center><img src="{{ url_for('static', filename='images/aaa.png') }}" alt="pylint" width=40 class="image" style="width: 50%"></center>
+<br><br><h1><b>The “Arrange-Act-Assert” (also AAA and 3A) Pattern of Testing</b></h1>
+<br><BR><p align="justify">The “Arrange-Act-Assert” (also AAA and 3A) pattern of testing was observed and named by Bill Wake in 2001.The AAA pattern is a pattern for structuring tests. It breaks each test down into three parts - Arrange, Act, and Assert - where each part is a step leading to the next. The arrange step sets up the test’s input values. The act step prompts the primary function being tested. And finally, the assert step verifies that the output of the function is what was expected.
+
+  In other words, each step in the pattern is a function whose return value is the input of the following step.
+  This pattern has several significant benefits. It creates a clear separation between a test's setup, operations, and results. This structure makes the code easier to read and understand. If you place the steps in order and format your code to separate them, you can scan a test and quickly comprehend what it does.
+
+  It also enforces a certain degree of discipline when you write your tests. You have to think clearly about the three steps your test will perform. But it makes tests more natural to write at the same time since you already have an outline.
+</p>
+    </div>
+
+{% endblock %}
+</div>
+
+  </div>
+</body>
