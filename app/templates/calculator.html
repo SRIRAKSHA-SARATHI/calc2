@@ -2,23 +2,36 @@
 {% block title %}Index{% endblock %}
 {% block head %}
     {{ super() }}
-    <style type="text/css">
-        .important {
-            color: cornflowerblue;
-        }
-    </style>
+    {{ super() }}
+<style type="text/css">
+    .container-fluid {
+
+    }
+
+    .form-cls {
+        border-radius: 15px;
+        box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+        color: white;
+    }
+
+
+</style>
 {% endblock %}
 {% block content %}
-{% if error %}
-<div class="alert alert-danger error alert-dismissible fade show" role="alert">
-    <{{ error }}>
-</div>
-{% endif %}
+<div class="container-fluid py-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center">CALCULATOR</h1>
+            {% if error %}
+            <div class="alert alert-danger error" role="alert">
+                {{ error }}
+            </div>
+            {% endif %}
+            <div class="mb-4 d-flex justify-content-center align-items center ">
 
-    <br><center><h1>CALCULATOR</h1></center>
-                    <br> <center> <img src="{{ url_for('static', filename='images/calc1.jpeg') }}" alt="pylint" width=20 class="image" style="width: 40%"></center>
-<br><br>
-    <form action="/calculator" method="POST">
+                <form action="/calculator" method="POST" class="border border-secondary p-5 form-cls bg-dark">
+                    <div class="form-group">
+
         <div class="row mb-3">
                         <label for="value1" class="col-sm-3 col-form-label">Input Value 1</label>
                         <div class="col-sm-8">
@@ -47,14 +60,14 @@
               <input type="radio" name="operation" id="multiplication" value="multiply_operation">
                 <label for="multiplication">Multiplication</label><br>
               <input type="radio" name="operation" id="division" value="divide_operation">
-                <label for="division">Division</label>
+                <label class="form-check-label" for="division">Division</label>
           </div>
 
             </div>
 
         </fieldset>
-
-        <input type="submit" value="Submit"><br><br>
+<div class="text-center pt-2 ">
+        <input type="submit" value="Calculate" class="btn btn-primary"><br><br>
     </form>
 <br><br>
 {% endblock %}
