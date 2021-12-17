@@ -33,8 +33,8 @@ class CalculatorController(ControllerBase):
             df.to_csv('output.csv', mode='a', index=False, header=False, sep=',')
 
             hist = pd.read_csv('output.csv', skiprows=1).values.tolist()
-            return render_template('result.html', val1=value1, val2=value2, ope=operation, res=result, hist=hist)
-        return render_template('calculator.html')
+            return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result, hist=hist)
+        return render_template('calculator.html', error=error)
 
     @staticmethod
     def get():
